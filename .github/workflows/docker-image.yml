@@ -7,10 +7,10 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
-     # - name: checkout repo
-     #   uses: actions/checkout@v3
-     #   with:
-     #    ref: main
+      - name: checkout repo
+        uses: actions/checkout@v3
+        with:
+         ref: main
     #  - name: Login to DockerHub
     #    uses: docker/login-action@v2
     #    with:

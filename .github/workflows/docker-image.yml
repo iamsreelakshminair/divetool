@@ -33,6 +33,7 @@ jobs:
        env:
          CI: "true"
        run: |
+         - apt-get install wget -y
          - wget https://github.com/wagoodman/dive/releases/download/v0.10.0/dive_0.10.0_linux_amd64.tar.gz
          - tar -xvzf dive_0.10.0_linux_amd64.tar.gz
          - ./dive iamsreelax/dive:26 

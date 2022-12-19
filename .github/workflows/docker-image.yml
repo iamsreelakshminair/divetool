@@ -15,4 +15,8 @@ jobs:
         uses: yuichielectric/dive-action@0.0.4
         with:
           image: "iamsreelax-dive:v1"
-         
+      - name: push to docker hub
+        run: |
+          docker login -u iamsreelax -p DockerHub123
+          # docker build -t iamsreelax/dive:2 
+          docker push iamsreelax-dive:v1

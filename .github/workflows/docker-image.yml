@@ -20,6 +20,6 @@ jobs:
       #uses: docker/build-push-action@v2
         run: |
           docker login -u iamsreelax -p DockerHub123
-          docker build -t iamsreelax/dive:27 .
+          # docker build -t iamsreelax/dive:27 .
+          docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock -e DOCKER_API_VERSION=1.37 wagoodman/dive:latest build -t iamsreelax/dive:27 .
           docker push iamsreelax/dive:27
-          docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock -e DOCKER_API_VERSION=1.37 wagoodman/dive:latest dive iamsreelax/dive:27

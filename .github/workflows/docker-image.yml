@@ -22,7 +22,7 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           push: true
-          repo: new-job
+          repo: iamsreelax/dive
           tags: iamsreelax/dive:25
      - name: Explore docker image
        timeout-minutes: 2

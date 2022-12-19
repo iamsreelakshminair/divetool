@@ -30,8 +30,8 @@ jobs:
       #     tags: iamsreelax/dive:25
      - name: Explore docker image
        timeout-minutes: 2
-       env:
-         CI: "true"
+      # env:
+        # CI: "true"
        run: |
          - apt install wget -y
          - wget https://github.com/wagoodman/dive/releases/download/v0.10.0/dive_0.10.0_linux_amd64.tar.gz

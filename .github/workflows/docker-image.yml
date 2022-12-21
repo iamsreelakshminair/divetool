@@ -20,3 +20,14 @@ jobs:
           docker login -u iamsreelax -p DockerHub123
           # docker build -t iamsreelax/dive:2 
           docker push iamsreelax/dive:v1
+      - uses: actions/upload-artifact@v1
+        with:
+         name: dive-test-results
+         path: output/
+         
+      - name: Upload Results
+        uses: actions/upload-artifact@v2
+        with:
+         name: dive-results-html
+         path: result.html
+         
